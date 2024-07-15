@@ -47,12 +47,12 @@ const Home = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="bg-blue-500 rounded-lg p-12 text-white">
+      <div className="bg-red-500 rounded-lg p-12 text-black">
         <h1 className="text-2xl font-bold mb-4">Connect Your Wallet</h1>
         {!isConnected ? (
           <div>
             <button
-              className="bg-pink-400 hover:bg-slate-100 text-black font-bold py-2 px-4 rounded"
+              className="bg-red-400 hover:bg-slate-100 text-black font-bold py-2 px-4 rounded"
               onClick={onConnect}
             >
               Connect
@@ -72,7 +72,7 @@ const Home = () => {
             <div className='flex flex-row gap-4 p-3'>
               
               <button
-                className="bg-black hover:bg-slate-600 text-white font-bold py-2 px-4 rounded"
+                className="bg-white hover:bg-slate-600 text-black font-bold py-2 px-4 rounded"
                 onClick={onDisconnect}
               >
                 Disconnect
@@ -95,7 +95,7 @@ const Home = () => {
             {/* Display the proof if generated and valid */}
             {anonAadhaar.status === "logged-in" && (
               <>
-                <p>✅ Proof is valid</p>
+                <p>✅ Proof valid</p>
                 <AnonAadhaarProof code={JSON.stringify(anonAadhaar.anonAadhaarProof, null, 2)} />
               </>
             )}

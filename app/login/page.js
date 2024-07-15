@@ -23,7 +23,7 @@ export default function Login() {
       {/* Display the proof if generated and valid */}
       {anonAadhaar?.status === "logged-in" && (
         <>
-          <p>✅ Proof is valid</p>
+          <p>✅ Proof valid</p>
           <AnonAadhaarProof code={JSON.stringify(anonAadhaar.anonAadhaarProof, null, 2)} />
         </>
       )}
